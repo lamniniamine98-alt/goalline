@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoalLine &mdash; Football News, Match Reports &amp; Transfer Updates</title>
+<meta name="description" content="Daily football news: match reports, transfer updates, previews and injury news from the Premier League, La Liga, Serie A and the Champions League.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%2316a34a'/><circle cx='16' cy='16' r='7' fill='%23fff'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Independent football news, updated daily</span>
+    <span id="today"></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="ball"></span>GoalLine</a>
+    <nav class="main-nav" id="nav" aria-label="Sections"></nav>
+    <div class="tools">
+      <div class="search">
+        <input type="search" id="search" placeholder="Search news" aria-label="Search news">
+      </div>
+      <button class="icon-btn" id="theme" type="button"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" aria-label="Top stories">
+    <a class="hero-main" id="hero-main" href="#"></a>
+    <div class="hero-side" id="hero-side"></div>
+  </section>
+
+  <div class="layout">
+    <div id="news">
+      <div class="section-head">
+        <h2 id="section-title">Latest News</h2>
+        <span class="meta" id="result-count"></span>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+      <div class="news-grid" id="grid"></div>
+    </div>
+
+    <aside class="sidebar">
+      <section class="widget">
+        <h2 class="widget-head">Most Read</h2>
+        <ul class="list" id="most-read"></ul>
+      </section>
+      <section class="widget">
+        <h2 class="widget-head">By Category</h2>
+        <ul class="list" id="by-category"></ul>
+      </section>
+    </aside>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <strong>GoalLine</strong> &mdash; football news.<br>
+      <span id="year"></span> &middot; All match details belong to their respective clubs.
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="#" id="footer-latest">Latest</a>
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/articles.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

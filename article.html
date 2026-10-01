@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football News Article &mdash; GoalLine</title>
+<meta name="description" content="Read the latest football news, match reports, transfers, previews and injury updates.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%2316a34a'/><circle cx='16' cy='16' r='7' fill='%23fff'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Independent football news, updated daily</span>
+    <span id="today"></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="ball"></span>GoalLine</a>
+    <div class="tools">
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme"></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap article-page">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a> &rarr;
+    <span id="crumb-cat"></span> &rarr;
+    <span id="crumb-title"></span>
+  </nav>
+
+  <header class="article-header">
+    <span class="tag" id="art-tag"></span>
+    <h1 id="art-title"></h1>
+    <p class="lede" id="art-lede"></p>
+    <div class="byline">
+      <div>
+        <strong id="art-author"></strong>
+        <div class="meta" id="art-meta"></div>
+      </div>
+      <div class="share">
+        <button id="share-link" type="button">Copy link</button>
+        <button id="share-twitter" type="button">Share on X</button>
+        <button id="share-whatsapp" type="button">WhatsApp</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="media article-hero" id="art-hero"></div>
+
+  <article class="article-body" id="art-body" aria-label="Article body"></article>
+
+  <section class="related">
+    <div class="section-head">
+      <h2>Related articles</h2>
+    </div>
+    <div class="news-grid" id="related"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <strong>GoalLine</strong> &mdash; football news.<br>
+      <span id="year"></span> &middot; All match details belong to their respective clubs.
+    </div>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#news">Latest</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/articles.js"></script>
+<script src="assets/js/article.js"></script>
+</body>
+</html>
