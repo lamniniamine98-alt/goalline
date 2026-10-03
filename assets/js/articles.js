@@ -6,9 +6,12 @@
 
    id       : unique, no spaces. Used for the link. e.g. "arsenal-chelsea"
    title    : the headline
-   category : must be one of the CATEGORIES keys below, or add your own
+   category : one of the CATEGORIES keys below (add your own if needed)
    league   : free text, e.g. "Premier League"
    date     : YYYY-MM-DD
+   lang     : "en", "fr" or "ar" -- the language this post is written in.
+              The menus follow the reader's chosen language; the post itself
+              keeps this language, including right-to-left for Arabic.
    author   : your name
    excerpt  : one or two sentences, shown on cards
    accent   : hex colour used for the cover block and the category label
@@ -32,15 +35,17 @@ const CATEGORIES = {
 
 /* ------------------------- SAMPLE POSTS -------------------------
    Delete everything from here down once you add your own news.
+   One post per language is included so you can see how each one looks.
    ---------------------------------------------------------------- */
 
 const ARTICLES = [
   {
-    id: "sample-match-report",
+    id: "sample-en",
     title: "SAMPLE: Extra-time thriller decides the derby",
     category: "Premier League",
     league: "Premier League",
     date: "2026-09-30",
+    lang: "en",
     author: "Newsroom",
     excerpt: "Replace this with your own headline. This sample post shows how a match report card and article page look.",
     accent: "#22d3ee",
@@ -54,11 +59,48 @@ const ARTICLES = [
     ]
   },
   {
+    id: "sample-fr",
+    title: "EXEMPLE : un derby decided dans les prolongations",
+    category: "La Liga",
+    league: "La Liga",
+    date: "2026-09-29",
+    lang: "fr",
+    author: "La rédaction",
+    excerpt: "Un exemple de post en français. Le menu suit la langue du lecteur, mais le texte reste en français.",
+    accent: "#f87171",
+    image: "",
+    body: [
+      "Remplacez ce texte par votre article. Commencez par dire qui a gagné, sur quel score et qui a marqué.",
+      "## Ce qui a tout décidé",
+      "Une ligne commençant par deux dièses crée un sous-titre comme celui-ci.",
+      "> Les citations commencent par un signe supérieur."
+    ]
+  },
+  {
+    id: "sample-ar",
+    title: "مثال: مباراة ديربي حُسمت في الوقت الإضافي",
+    category: "Champions League",
+    league: "Champions League",
+    date: "2026-09-28",
+    lang: "ar",
+    author: "غرفة الأخبار",
+    excerpt: "مثال على خبر بالعربية. يُعرض النص من اليمين إلى اليسار تلقائياً.",
+    accent: "#818cf8",
+    image: "",
+    body: [
+      "استبدل هذا النص بأخبارك. اكتب في الفقرة الأولى من فاز وبأي نتيجة ومن سجّل الأهداف.",
+      "## ما الذي حسم المباراة",
+      "السطر الذي يبدأ بعلامة ## يصبح عنواناً فرعياً.",
+      "> تبدأ الاقتباسات بعلامة أكبر من."
+    ]
+  },
+  {
     id: "sample-transfer",
     title: "SAMPLE: Record fee agreed as window closes",
     category: "Transfers",
     league: "Premier League",
-    date: "2026-09-28",
+    date: "2026-09-27",
+    lang: "en",
     author: "Newsroom",
     excerpt: "A second sample post so the homepage has more than one card to lay out.",
     accent: "#fbbf24",
@@ -70,28 +112,12 @@ const ARTICLES = [
     ]
   },
   {
-    id: "sample-preview",
-    title: "SAMPLE: Three things to watch in this weekend's fixtures",
-    category: "Preview",
-    league: "Champions League",
-    date: "2026-09-26",
-    author: "Newsroom",
-    excerpt: "A preview-style sample post. Useful for testing longer headlines.",
-    accent: "#c084fc",
-    image: "",
-    body: [
-      "Preview posts work well for build-ups to a big game. Lead with the match and the stakes.",
-      "## Key battles",
-      "Then list the individual matchups you want to highlight.",
-      "> Keep it short. Readers scan the first line."
-    ]
-  },
-  {
     id: "sample-injury",
     title: "SAMPLE: Captain faces spell out after scan results",
     category: "Injury News",
-    league: "La Liga",
-    date: "2026-09-22",
+    league: "Premier League",
+    date: "2026-09-24",
+    lang: "en",
     author: "Newsroom",
     excerpt: "A short breaking-news sample post.",
     accent: "#fb923c",

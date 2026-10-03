@@ -1,5 +1,65 @@
 /* Shared helpers used by every page. Loaded before the page script. */
 
+const LANGS = ["en", "fr", "ar"];
+
+function detectLang() {
+  const fromUrl = new URLSearchParams(location.search).get("lang");
+  if (LANGS.includes(fromUrl)) return fromUrl;
+
+  let saved = null;
+  try { saved = localStorage.getItem("gl-lang"); } catch (e) {}
+  if (LANGS.includes(saved)) return saved;
+
+  const tags = navigator.languages && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || ""];
+  for (const tag of tags) {
+    const base = String(tag).toLowerCase().split("-")[0];
+    if (LANGS.includes(base)) return base;
+  }
+  return "en";
+}
+
+let CURRENT_LANG = detectLang();
+
+function conf(lang) {
+  return I18N[lang] || I18N.en;
+}
+
+/* Look up a UI string; falls back to English, then to the key itself. */
+function t(key, vars) {
+  let value = conf(CURRENT_LANG)[key];
+  if (typeof value !== "string") value = I18N.en[key];
+  if (typeof value !== "string") return key;
+  return value.replace(/\{(\w+)\}/g, (m, name) =>
+    vars && vars[name] != null ? vars[name] : m
+  );
+}
+
+function catLabel(category) {
+  const group = CAT_LABELS[category];
+  if (!group) return category;
+  return group[CURRENT_LANG] || group.en || category;
+}
+
+function dirFor(lang) {
+  return conf(lang).dir;
+}
+
+function localeFor(lang) {
+  return conf(lang).locale || conf(lang).dir;
+}
+
+function isRtl(lang) {
+  return dirFor(lang || CURRENT_LANG) === "rtl";
+}
+
+/* A post declares its own language so a French post stays LTR and an
+   Arabic post stays RTL even when the menus are in another language. */
+function postLang(article) {
+  return LANGS.includes(article.lang) ? article.lang : "en";
+}
+
 function escapeHtml(value) {
   return String(value == null ? "" : value)
     .replace(/&/g, "&amp;")
@@ -13,10 +73,16 @@ function byNewest(a, b) {
   return new Date(b.date) - new Date(a.date);
 }
 
-function formatDate(iso) {
+function formatDate(iso, lang) {
   const d = new Date(iso + "T00:00:00");
   if (isNaN(d)) return "";
-  return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  return d.toLocaleDateString(localeFor(lang || CURRENT_LANG));
+}
+
+function todayLabel(lang) {
+  return new Date().toLocaleDateString(localeFor(lang || CURRENT_LANG), {
+    weekday: "long", day: "numeric", month: "long", year: "numeric"
+  });
 }
 
 function accentFor(article) {
@@ -32,6 +98,8 @@ function readingTime(article) {
 function initials(title) {
   return String(title || "")
     .replace(/^SAMPLE:\s*/i, "")
+    .replace(/^EXEMPLE:\s*/i, "")
+    .replace(/^مثال:\s*/, "")
     .split(/\s+/)
     .filter(Boolean)
     .slice(0, 2)
@@ -43,26 +111,31 @@ function initials(title) {
 function mediaHtml(article, extraClass) {
   const accent = accentFor(article);
   const cls = "media" + (extraClass ? " " + extraClass : "");
+  const dir = dirFor(postLang(article));
   if (article.image) {
-    return `<div class="${cls}" style="--accent:${accent}">
-      <img src="${escapeHtml(article.image)}" alt="" loading="lazy"
-           onerror="this.remove()">
+    return `<div class="${cls}" style="--accent:${accent}" dir="${dir}">
+      <img src="${escapeHtml(article.image)}" alt="" loading="lazy" onerror="this.remove()">
     </div>`;
   }
-  return `<div class="${cls}" style="--accent:${accent}">
+  return `<div class="${cls}" style="--accent:${accent}" dir="${dir}">
     <span class="initials" aria-hidden="true">${escapeHtml(initials(article.title))}</span>
-    <span class="badge"><span class="tag">${escapeHtml(article.category)}</span></span>
+    <span class="badge"><span class="tag">${escapeHtml(catLabel(article.category))}</span></span>
   </div>`;
 }
 
 function metaItemsHtml(article, withReadingTime) {
+  const lang = postLang(article);
   const bits = [
-    `<span>${escapeHtml(formatDate(article.date))}</span>`,
-    `<span class="dot">${escapeHtml(article.league || article.category)}</span>`,
-    `<span class="dot">by ${escapeHtml(article.author || "Staff")}</span>`
+    `<span>${escapeHtml(formatDate(article.date, lang))}</span>`,
+    `<span class="dot">${escapeHtml(article.league || catLabel(article.category))}</span>`,
+    `<span class="dot">${escapeHtml(t("byAuthor", { name: article.author || "Staff" }))}</span>`
   ];
   if (withReadingTime) {
-    bits.push(`<span class="dot">${readingTime(article)} min read</span>`);
+    bits.push(`<span class="dot">${escapeHtml(t("readTime", { n: readingTime(article) }))}</span>`);
+  }
+  /* Show the post's language only when it differs from the interface. */
+  if (lang !== CURRENT_LANG) {
+    bits.push(`<span class="lang-mark" title="${escapeHtml(langLabel(lang))}">${lang.toUpperCase()}</span>`);
   }
   return bits.join("");
 }
@@ -71,11 +144,17 @@ function metaHtml(article, withReadingTime) {
   return `<div class="meta">${metaItemsHtml(article, withReadingTime)}</div>`;
 }
 
+function langLabel(lang) {
+  return { en: "English", fr: "Français", ar: "العربية" }[lang] || lang;
+}
+
 function cardHtml(article) {
-  return `<article class="card reveal">
-    <a href="article.html?id=${encodeURIComponent(article.id)}">${mediaHtml(article)}</a>
+  const href = `article.html?id=${encodeURIComponent(article.id)}&lang=${CURRENT_LANG}`;
+  const dir = dirFor(postLang(article));
+  return `<article class="card reveal" dir="${dir}" lang="${postLang(article)}">
+    <a href="${href}">${mediaHtml(article)}</a>
     <div class="card-body">
-      <h3><a href="article.html?id=${encodeURIComponent(article.id)}">${escapeHtml(article.title)}</a></h3>
+      <h3><a href="${href}">${escapeHtml(article.title)}</a></h3>
       <p>${escapeHtml(article.excerpt || "")}</p>
       ${metaHtml(article, false)}
     </div>
@@ -98,9 +177,10 @@ function initTheme(button) {
   applyTheme(saved || "dark");
   if (!button) return;
   const label = () => {
-    button.textContent = document.documentElement.dataset.theme === "light" ? "\u263D" : "\u263E";
-    button.title = "Switch theme";
-    button.setAttribute("aria-label", "Switch between dark and light theme");
+    const dark = document.documentElement.dataset.theme !== "light";
+    button.textContent = dark ? "\u263E" : "\u2600";
+    button.title = "Light / dark";
+    button.setAttribute("aria-label", "Light / dark");
   };
   label();
   button.addEventListener("click", () => {
@@ -108,6 +188,42 @@ function initTheme(button) {
     applyTheme(next);
     label();
   });
+}
+
+/* Language: apply to <html>, remember it, and let the page redraw. */
+function setLang(lang) {
+  if (!LANGS.includes(lang)) return;
+  CURRENT_LANG = lang;
+  const dir = dirFor(lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = dir;
+  try { localStorage.setItem("gl-lang", lang); } catch (e) {}
+
+  const url = new URL(location.href);
+  url.searchParams.set("lang", lang);
+  history.replaceState(null, "", url);
+
+  document.title = t("metaTitle");
+  const desc = document.querySelector('meta[name="description"]');
+  if (desc) desc.content = t("metaDesc");
+
+  if (typeof window.renderAll === "function") window.renderAll();
+}
+
+function initLangSwitcher(select) {
+  if (!select) return;
+  select.value = CURRENT_LANG;
+  select.addEventListener("change", () => setLang(select.value));
+  const label = document.getElementById("lang-label");
+  if (label) label.textContent = t("langAria");
+}
+
+/* Set text only when the element is on the page: the "not found" view
+   removes the byline, so its buttons must not be assumed to exist. */
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+  return el;
 }
 
 function toast(message) {

@@ -1,35 +1,56 @@
 const byId = (id) => document.getElementById(id);
 
+function renderChrome() {
+  setText("tagline", t("tagline"));
+  setText("today", todayLabel());
+  setText("year", new Date().getFullYear());
+  setText("footer-tagline", t("footerTagline"));
+  setText("footer-rights", t("footerRights"));
+  setText("footer-home", t("home"));
+  setText("footer-latest", t("footerLatest"));
+  setText("crumb-home", t("home"));
+  setText("related-head", t("related"));
+  setText("share-link", t("shareCopy"));
+  setText("share-twitter", t("shareX"));
+  setText("lang-label", t("langAria"));
+}
+
 function renderBody(article) {
-  byId("art-body").innerHTML = (article.body || [])
+  const raw = article.body || [];
+  const body = byId("art-body");
+  body.lang = postLang(article);
+  body.dir = dirFor(postLang(article));
+  body.innerHTML = raw
     .map((line) => {
-      const raw = line.trim();
-      if (/^##\s+/.test(raw)) return `<h2>${escapeHtml(raw.replace(/^##\s+/, ""))}</h2>`;
-      if (/^>\s+/.test(raw)) return `<blockquote>${escapeHtml(raw.replace(/^>\s+/, ""))}</blockquote>`;
-      return `<p>${escapeHtml(raw)}</p>`;
+      const text = line.trim();
+      if (/^##\s+/.test(text)) return `<h2>${escapeHtml(text.replace(/^##\s+/, ""))}</h2>`;
+      if (/^>\s+/.test(text)) return `<blockquote>${escapeHtml(text.replace(/^>\s+/, ""))}</blockquote>`;
+      return `<p>${escapeHtml(text)}</p>`;
     })
     .join("");
 }
 
 function renderRelated(article) {
-  const related = ARTICLES
-    .filter((a) => a.id !== article.id)
-    .sort(byNewest)
-    .filter((a) => a.category === article.category)
-    .concat(ARTICLES.filter((a) => a.id !== article.id && a.category !== article.category).sort(byNewest))
-    .slice(0, 3);
+  const others = ARTICLES.filter((a) => a.id !== article.id);
+  const sameCat = others.filter((a) => a.category === article.category).sort(byNewest);
+  const rest = others.filter((a) => a.category !== article.category).sort(byNewest);
 
-  byId("related").innerHTML = related.map(cardHtml).join("");
+  byId("related").innerHTML = sameCat.concat(rest).slice(0, 3).map(cardHtml).join("");
 }
+
+let sharingBound = false;
 
 function initSharing(article) {
   const url = location.href;
   const text = article.title;
 
+  if (sharingBound) return;
+  sharingBound = true;
+
   byId("share-link").addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(url);
-      toast("Link copied");
+      toast(t("shareCopy"));
     } catch (e) {
       toast(url);
     }
@@ -55,24 +76,39 @@ function render() {
   const article = id ? findArticle(id) : null;
 
   if (!article) {
-    byId("art-title").textContent = "Article not found";
-    byId("art-lede").textContent = "This post may have been removed, or the link is wrong.";
+    document.title = t("notFoundTitle") + " — GoalLine";
+    byId("art-title").textContent = t("notFoundTitle");
+    byId("art-title").lang = CURRENT_LANG;
+    byId("art-lede").textContent = t("notFoundBody");
+    byId("art-tag").hidden = true;
     byId("art-hero").hidden = true;
-    document.querySelector(".byline").remove();
+    const byline = document.querySelector(".byline");
+    if (byline) byline.remove();
+    byId("crumb-cat").textContent = "";
+    byId("crumb-title").textContent = t("notFoundTitle");
     byId("related").innerHTML = ARTICLES.slice().sort(byNewest).slice(0, 3).map(cardHtml).join("");
     return;
   }
 
   const accent = accentFor(article);
+  const lang = postLang(article);
+  const dir = dirFor(lang);
 
   document.title = article.title + " — GoalLine";
-  document.documentElement.style.setProperty("--accent", accent);
+  const desc = document.querySelector('meta[name="description"]');
+  if (desc) desc.content = article.excerpt || t("metaDesc");
 
-  byId("crumb-cat").textContent = article.category;
+  byId("crumb-cat").textContent = catLabel(article.category);
   byId("crumb-title").textContent = article.title;
+  byId("crumb-cat").lang = CURRENT_LANG;
+
+  const header = document.querySelector(".article-header");
+  header.lang = lang;
+  header.dir = dir;
 
   const tag = byId("art-tag");
-  tag.textContent = article.category;
+  tag.hidden = false;
+  tag.textContent = catLabel(article.category);
   tag.style.setProperty("--accent", accent);
 
   byId("art-title").textContent = article.title;
@@ -81,6 +117,9 @@ function render() {
   byId("art-meta").innerHTML = metaItemsHtml(article, true);
 
   const hero = byId("art-hero");
+  hero.hidden = false;
+  hero.lang = lang;
+  hero.dir = dir;
   hero.style.setProperty("--accent", accent);
   hero.innerHTML = article.image
     ? `<img src="${escapeHtml(article.image)}" alt="">`
@@ -88,13 +127,15 @@ function render() {
 
   renderBody(article);
   renderRelated(article);
-  initSharing(article);
 }
 
-byId("today").textContent = new Date().toLocaleDateString("en-GB", {
-  weekday: "long", day: "numeric", month: "long", year: "numeric"
-});
-byId("year").textContent = new Date().getFullYear();
+function renderAll() {
+  renderChrome();
+  render();
+}
+
+window.renderAll = renderAll;
 
 initTheme(byId("theme"));
-render();
+initLangSwitcher(byId("lang"));
+setLang(CURRENT_LANG);

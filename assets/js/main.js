@@ -4,18 +4,56 @@ const sorted = ARTICLES.slice().sort(byNewest);
 let activeCategory = "All";
 let query = "";
 
+function usedCategories() {
+  return Object.keys(CATEGORIES).filter((c) => sorted.some((a) => a.category === c));
+}
+
+function renderChrome() {
+  setText("tagline", t("tagline"));
+  setText("today", todayLabel());
+  setText("year", new Date().getFullYear());
+  setText("footer-tagline", t("footerTagline"));
+  setText("footer-rights", t("footerRights"));
+  setText("footer-home", t("home"));
+  setText("footer-latest", t("footerLatest"));
+  setText("footer-top", t("footerTop"));
+  setText("most-read-head", t("mostRead"));
+  setText("by-category-head", t("byCategory"));
+  setText("lang-label", t("langAria"));
+
+  const search = byId("search");
+  search.placeholder = t("searchPlaceholder");
+  search.setAttribute("aria-label", t("searchPlaceholder"));
+}
+
 function renderNav() {
-  const cats = Object.keys(CATEGORIES).filter((c) => sorted.some((a) => a.category === c));
-  byId("nav").innerHTML = ["Latest"].concat(cats)
-    .map((c) => `<a href="#news" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</a>`)
+  const cats = usedCategories();
+  const items = [["All", t("navLatest")]].concat(
+    cats.map((c) => [c, catLabel(c)])
+  );
+  byId("nav").innerHTML = items
+    .map(([cat, label]) =>
+      `<a href="#news" data-cat="${escapeHtml(cat)}">${escapeHtml(label)}</a>`)
     .join("");
+  markActiveNav();
+}
+
+function markActiveNav() {
+  const cats = usedCategories();
+  const keys = ["All"].concat(cats);
+  byId("nav").querySelectorAll("a").forEach((a, i) => {
+    a.classList.toggle("active", keys[i] === activeCategory);
+  });
 }
 
 function renderFilters() {
-  const cats = Object.keys(CATEGORIES).filter((c) => sorted.some((a) => a.category === c));
-  byId("filters").innerHTML = ["All"].concat(cats)
-    .map((c) => `<button class="chip${c === activeCategory ? " active" : ""}" type="button" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`)
+  byId("filters").innerHTML = ["All"].concat(usedCategories())
+    .map((cat) => {
+      const label = cat === "All" ? t("navLatest") : catLabel(cat);
+      return `<button class="chip${cat === activeCategory ? " active" : ""}" type="button" data-cat="${escapeHtml(cat)}">${escapeHtml(label)}</button>`;
+    })
     .join("");
+  markActiveNav();
 }
 
 function renderHero() {
@@ -24,26 +62,31 @@ function renderHero() {
 
   if (!lead) {
     main.hidden = true;
-    byId("hero-side").innerHTML = `<div class="empty">No posts yet. Add one in <code>assets/js/articles.js</code>.</div>`;
+    byId("hero-side").innerHTML = `<div class="empty">${escapeHtml(t("emptyNone"))}</div>`;
     return;
   }
 
-  main.href = `article.html?id=${encodeURIComponent(lead.id)}`;
+  const href = `article.html?id=${encodeURIComponent(lead.id)}&lang=${CURRENT_LANG}`;
+  const lang = postLang(lead);
+  main.href = href;
+  main.lang = lang;
+  main.dir = dirFor(lang);
   main.style.setProperty("--accent", accentFor(lead));
   main.innerHTML = `
     ${mediaHtml(lead)}
     <div class="hero-body">
-      <span class="tag">${escapeHtml(lead.category)}</span>
+      <span class="tag" style="--accent:${accentFor(lead)}">${escapeHtml(catLabel(lead.category))}</span>
       <h1>${escapeHtml(lead.title)}</h1>
       <p>${escapeHtml(lead.excerpt || "")}</p>
       ${metaHtml(lead, true)}
     </div>`;
 
   byId("hero-side").innerHTML = rest.slice(0, 4).map((a) => `
-    <a class="mini" href="article.html?id=${encodeURIComponent(a.id)}">
+    <a class="mini" href="article.html?id=${encodeURIComponent(a.id)}&lang=${CURRENT_LANG}"
+       lang="${postLang(a)}" dir="${dirFor(postLang(a))}">
       ${mediaHtml(a)}
       <div>
-        <span class="tag" style="--accent:${accentFor(a)}">${escapeHtml(a.category)}</span>
+        <span class="tag" style="--accent:${accentFor(a)}">${escapeHtml(catLabel(a.category))}</span>
         <h3>${escapeHtml(a.title)}</h3>
       </div>
     </a>`).join("");
@@ -61,22 +104,20 @@ function renderGrid() {
   const list = sorted.filter(matches);
   byId("grid").innerHTML = list.length
     ? list.map(cardHtml).join("")
-    : `<div class="empty">Nothing matches that. Try another search or category.</div>`;
+    : `<div class="empty">${escapeHtml(t("emptyNoMatch"))}</div>`;
 
-  byId("section-title").textContent = activeCategory === "All" ? "Latest News" : activeCategory;
-  byId("result-count").textContent = list.length + (list.length === 1 ? " post" : " posts");
+  byId("section-title").textContent = activeCategory === "All" ? t("sectionLatest") : catLabel(activeCategory);
+  byId("result-count").textContent = list.length + " / " + sorted.length;
 }
 
 function renderSidebar() {
-  const readCount = {};
-  sorted.forEach((a) => { readCount[a.id] = (readCount[a.id] || 0) + 1; });
-
   byId("most-read").innerHTML = sorted
     .slice()
     .sort((a, b) => (b.views || 0) - (a.views || 0))
     .slice(0, 5)
     .map((a, i) => `
-      <li><a href="article.html?id=${encodeURIComponent(a.id)}">
+      <li><a href="article.html?id=${encodeURIComponent(a.id)}&lang=${CURRENT_LANG}"
+             lang="${postLang(a)}" dir="${dirFor(postLang(a))}">
         <span class="rank">${i + 1}</span>
         ${mediaHtml(a)}
         <span class="t">${escapeHtml(a.title)}</span>
@@ -90,8 +131,8 @@ function renderSidebar() {
     .sort((a, b) => counts[b] - counts[a])
     .map((c) => `
       <li><a href="#news" data-cat="${escapeHtml(c)}">
-        <span class="tag" style="--accent:${escapeHtml((CATEGORIES[c] || "#22d3ee"))}">${escapeHtml(c)}</span>
-        <span class="t">${counts[c]} post${counts[c] === 1 ? "" : "s"}</span>
+        <span class="tag" style="--accent:${escapeHtml(CATEGORIES[c] || "#22d3ee")}">${escapeHtml(catLabel(c))}</span>
+        <span class="t">${counts[c]}</span>
       </a></li>`)
     .join("");
 }
@@ -101,8 +142,17 @@ function selectCategory(cat, scroll) {
   renderFilters();
   renderGrid();
   if (scroll) {
-    document.getElementById("news")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    byId("news").scrollIntoView({ behavior: "smooth", block: "start" });
   }
+}
+
+function renderAll() {
+  renderChrome();
+  renderNav();
+  renderFilters();
+  renderHero();
+  renderGrid();
+  renderSidebar();
 }
 
 function bindEvents() {
@@ -129,20 +179,16 @@ function bindEvents() {
     e.preventDefault();
     selectCategory("All", true);
   });
+
+  byId("footer-top").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
-function renderChrome() {
-  byId("today").textContent = new Date().toLocaleDateString("en-GB", {
-    weekday: "long", day: "numeric", month: "long", year: "numeric"
-  });
-  byId("year").textContent = new Date().getFullYear();
-}
+window.renderAll = renderAll;
 
 initTheme(byId("theme"));
-renderChrome();
-renderNav();
-renderFilters();
-renderHero();
-renderGrid();
-renderSidebar();
+initLangSwitcher(byId("lang"));
+setLang(CURRENT_LANG);
 bindEvents();
