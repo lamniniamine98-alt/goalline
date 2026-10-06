@@ -65,7 +65,7 @@ function mediaHtml(article, extraClass) {
   const cls = "media" + (extraClass ? " " + extraClass : "");
   if (article.image) {
     return `<div class="${cls}" style="--accent:${accent}">
-      <img src="${escapeHtml(article.image)}" alt="" loading="lazy" onerror="this.remove()">
+      <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.imageAlt || "")}" loading="lazy" onerror="this.remove()">
     </div>`;
   }
   return `<div class="${cls}" style="--accent:${accent}">

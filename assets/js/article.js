@@ -117,7 +117,7 @@ function render() {
   hero.hidden = false;
   hero.style.setProperty("--accent", accent);
   hero.innerHTML = article.image
-    ? `<img src="${escapeHtml(article.image)}" alt="">`
+    ? `<img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.imageAlt || "")}">`
     : `<span class="initials" aria-hidden="true">${escapeHtml(initials(article.title))}</span>`;
 
   renderBody(article);

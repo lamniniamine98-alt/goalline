@@ -12,8 +12,11 @@
    author   : your name
    excerpt  : one or two sentences, shown on cards
    accent   : hex colour used for the cover block and the category label
-   image    : optional. Path to a picture, e.g. "assets/img/match.jpg".
+image    : optional. Path to a picture, e.g. "assets/img/match.jpg".
               Leave as "" and a coloured block is shown instead.
+   imageAlt : optional. Describes the picture for screen readers. Keep it
+              factual -- these are usually illustrative photos, so describe
+              what is actually in the frame rather than restating the headline.
    source   : optional. { name, url } -- credited at the end of the post.
               Write the summary in your own words and link to the report
               instead of copying the publisher's text.
@@ -45,7 +48,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "The champions have formally appealed the ruling that found them guilty on almost every one of 115 charges. Sanctions are a separate process, and the league has said a points deduction cannot be ruled out.",
     accent: "#22d3ee",
-    image: "",
+    image: "assets/img/etihad-stadium.jpg",
+    imageAlt: "The Etihad Stadium pitch in Manchester, home of Manchester City",
     source: {
       name: "Premier League statement",
       url: "https://www.premierleague.com/en/news/4729207/premier-league-statement-manchester-city-fc-appeal-decision-of-independent-commission-02-october-2026"
@@ -71,7 +75,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "The league phase resumes on 13 and 14 October with the tie of the round in Manchester, where the holders Paris Saint-Germain travel to the Etihad.",
     accent: "#c084fc",
-    image: "",
+    image: "assets/img/ucl-night-stadium.jpg",
+    imageAlt: "A night football match under stadium floodlights with a packed crowd",
     source: {
       name: "UEFA Champions League",
       url: "https://www.uefa.com/uefachampionsleague/"
@@ -93,7 +98,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "Domestic football is back after the international break, and the weekend's headline fixture is at Anfield. Several kick-off times have been moved to suit television.",
     accent: "#c084fc",
-    image: "",
+    image: "assets/img/matchday-crowd.jpg",
+    imageAlt: "A full crowd watching a football match in a modern stadium",
     source: {
       name: "BBC Sport",
       url: "https://www.bbc.com/sport/football/premier-league"
@@ -114,7 +120,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "Liverpool have agreed a fee in the region of £123m for Bradley Barcola, while Manchester United completed a £70m move for Baleba. Several deals remain in progress.",
     accent: "#fbbf24",
-    image: "",
+    image: "assets/img/soccer-player.jpg",
+    imageAlt: "A footballer on the pitch during a match",
     source: {
       name: "BBC Sport transfers",
       url: "https://www.bbc.com/sport/football/transfer"
@@ -137,7 +144,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "The 70th Ballon d'Or is awarded at the London Palladium on 26 October, with the Barcelona forward leading the debate after a strong start to his season.",
     accent: "#f87171",
-    image: "",
+    image: "assets/img/golden-trophy.jpg",
+    imageAlt: "A golden trophy displayed on a confetti-strewn surface",
     source: {
       name: "ESPN soccer",
       url: "https://www.espn.com/soccer/"
@@ -160,7 +168,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "Alyssa Thompson scored the only goal at Stamford Bridge on a night Arsenal hit the post twice and lost ground in the Women's Super League title race.",
     accent: "#f472b6",
-    image: "",
+    image: "assets/img/womens-football.jpg",
+    imageAlt: "Female footballers in action during a women's soccer match",
     source: {
       name: "BBC Sport",
       url: "https://www.bbc.com/sport/football/womens-super-league"
@@ -182,7 +191,8 @@ const ARTICLES = [
     author: "Newsroom",
     excerpt: "European nations play Nations League fixtures in early October, while Morocco remain the only leading side to go through the Africa Cup of Nations group stage unbeaten.",
     accent: "#38bdf8",
-    image: "",
+    image: "assets/img/supporters.jpg",
+    imageAlt: "Supporters cheering in the stands at a football ground",
     source: {
       name: "ESPN soccer",
       url: "https://www.espn.com/soccer/"
