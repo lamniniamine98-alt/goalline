@@ -19,7 +19,7 @@ function renderChrome() {
   setText("footer-top", t("footerTop"));
   setText("most-read-head", t("mostRead"));
   setText("by-category-head", t("byCategory"));
-  setText("lang-label", t("langAria"));
+  applyMeta();
 
   const search = byId("search");
   search.placeholder = t("searchPlaceholder");
@@ -66,11 +66,8 @@ function renderHero() {
     return;
   }
 
-  const href = `article.html?id=${encodeURIComponent(lead.id)}&lang=${CURRENT_LANG}`;
-  const lang = postLang(lead);
+  const href = articleHref(lead);
   main.href = href;
-  main.lang = lang;
-  main.dir = dirFor(lang);
   main.style.setProperty("--accent", accentFor(lead));
   main.innerHTML = `
     ${mediaHtml(lead)}
@@ -82,8 +79,7 @@ function renderHero() {
     </div>`;
 
   byId("hero-side").innerHTML = rest.slice(0, 4).map((a) => `
-    <a class="mini" href="article.html?id=${encodeURIComponent(a.id)}&lang=${CURRENT_LANG}"
-       lang="${postLang(a)}" dir="${dirFor(postLang(a))}">
+    <a class="mini" href="${articleHref(a)}">
       ${mediaHtml(a)}
       <div>
         <span class="tag" style="--accent:${accentFor(a)}">${escapeHtml(catLabel(a.category))}</span>
@@ -116,9 +112,8 @@ function renderSidebar() {
     .sort((a, b) => (b.views || 0) - (a.views || 0))
     .slice(0, 5)
     .map((a, i) => `
-      <li><a href="article.html?id=${encodeURIComponent(a.id)}&lang=${CURRENT_LANG}"
-             lang="${postLang(a)}" dir="${dirFor(postLang(a))}">
-        <span class="rank">${i + 1}</span>
+<li><a href="${articleHref(a)}">
+             <span class="rank">${i + 1}</span>
         ${mediaHtml(a)}
         <span class="t">${escapeHtml(a.title)}</span>
       </a></li>`)
@@ -189,6 +184,5 @@ function bindEvents() {
 window.renderAll = renderAll;
 
 initTheme(byId("theme"));
-initLangSwitcher(byId("lang"));
-setLang(CURRENT_LANG);
 bindEvents();
+renderAll();

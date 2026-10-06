@@ -9,9 +9,6 @@
    category : one of the CATEGORIES keys below (add your own if needed)
    league   : free text, e.g. "Premier League"
    date     : YYYY-MM-DD
-   lang     : "en", "fr" or "ar" -- the language this post is written in.
-              The menus follow the reader's chosen language; the post itself
-              keeps this language, including right-to-left for Arabic.
    author   : your name
    excerpt  : one or two sentences, shown on cards
    accent   : hex colour used for the cover block and the category label
@@ -45,7 +42,6 @@ const ARTICLES = [
     category: "Premier League",
     league: "Premier League",
     date: "2026-10-04",
-    lang: "en",
     author: "Newsroom",
     excerpt: "The champions have formally appealed the ruling that found them guilty on almost every one of 115 charges. Sanctions are a separate process, and the league has said a points deduction cannot be ruled out.",
     accent: "#22d3ee",
@@ -72,7 +68,6 @@ const ARTICLES = [
     category: "Preview",
     league: "Champions League",
     date: "2026-10-04",
-    lang: "en",
     author: "Newsroom",
     excerpt: "The league phase resumes on 13 and 14 October with the tie of the round in Manchester, where the holders Paris Saint-Germain travel to the Etihad.",
     accent: "#c084fc",
@@ -95,7 +90,6 @@ const ARTICLES = [
     category: "Preview",
     league: "Premier League",
     date: "2026-10-04",
-    lang: "en",
     author: "Newsroom",
     excerpt: "Domestic football is back after the international break, and the weekend's headline fixture is at Anfield. Several kick-off times have been moved to suit television.",
     accent: "#c084fc",
@@ -117,7 +111,6 @@ const ARTICLES = [
     category: "Transfers",
     league: "Premier League",
     date: "2026-10-03",
-    lang: "en",
     author: "Newsroom",
     excerpt: "Liverpool have agreed a fee in the region of £123m for Bradley Barcola, while Manchester United completed a £70m move for Baleba. Several deals remain in progress.",
     accent: "#fbbf24",
@@ -141,7 +134,6 @@ const ARTICLES = [
     category: "La Liga",
     league: "La Liga",
     date: "2026-10-03",
-    lang: "en",
     author: "Newsroom",
     excerpt: "The 70th Ballon d'Or is awarded at the London Palladium on 26 October, with the Barcelona forward leading the debate after a strong start to his season.",
     accent: "#f87171",
@@ -165,7 +157,6 @@ const ARTICLES = [
     category: "Women's Football",
     league: "Women's Super League",
     date: "2026-09-27",
-    lang: "en",
     author: "Newsroom",
     excerpt: "Alyssa Thompson scored the only goal at Stamford Bridge on a night Arsenal hit the post twice and lost ground in the Women's Super League title race.",
     accent: "#f472b6",
@@ -188,7 +179,6 @@ const ARTICLES = [
     category: "International",
     league: "Nations League",
     date: "2026-10-03",
-    lang: "en",
     author: "Newsroom",
     excerpt: "European nations play Nations League fixtures in early October, while Morocco remain the only leading side to go through the Africa Cup of Nations group stage unbeaten.",
     accent: "#38bdf8",
@@ -202,55 +192,6 @@ const ARTICLES = [
       "## Morocco's clean record",
       "At the Women's Africa Cup of Nations, Morocco are the only side among the tournament's leading teams to have come through the group stage without defeat. Nigeria, South Africa and Ghana have each lost at least once, which leaves them needing wins from their remaining fixtures to keep their knockout positions alive.",
       "Morocco go into the knockout rounds with the strongest record in the group, and a semi-final place would also strengthen their case for a place at the next Women's World Cup."
-    ]
-  },
-  {
-    id: "man-city-appeal-fr",
-    title: "Manchester City fait appel, une deduction de points toujours possible",
-    category: "Premier League",
-    league: "Premier League",
-    date: "2026-10-04",
-    lang: "fr",
-    author: "La redaction",
-    excerpt: "Le champion d'Angleterre a officiellement fait appel du jugement qui le declarait coupable sur la quasi-totalite des 115 accusations. Les sanctions sont instruites separement.",
-    accent: "#22d3ee",
-    image: "",
-    source: {
-      name: "Premier League",
-      url: "https://www.premierleague.com/en/news/4727779/premier-league-statement-manchester-city-fc"
-    },
-    body: [
-      "Une commission independante a declare Manchester City coupable de toutes les accusations de manquement grave aux regles financieres de la Premier League sur neuf saisons, de 2009/10 a 2017/18, ainsi que de trois des quatre accusations relatives au manque de cooperation du club avec l'enquete. Le 2 octobre, le club a annonce avoir fait appel, en soutenant que l'avis de la commission comporte des erreurs manifestes de droit, de principe et de fait. L'appel sera examine par le President du panel judiciaire, lors d'une audience a huis clos.",
-      "## Ce qui a ete retenu",
-      "La commission a juge que plusieurs accords commerciaux etaient des faux, ou du moins sans rapport avec leur substance economique : les sponsors ne versaient qu'une fraction de la somme prevue, le reste etant pris en charge par les proprietaires du club. Le montant concerne a ete chiffre a 830,69 millions de livres.",
-      "## La suite",
-      "Les sanctions sont instruites separement. Le reglement de la Premier League permet une amende, une deduction de points et d'autres sanctions sportives, et la ligue a indique qu'elle sollicitera la sanction la plus severe possible. Une deduction assez importante pour changer le vainqueur du championnat n'est pas exclue.",
-      "> Pep Guardiola a declare etre derriere son club.",
-      "Selon la procedure accelerate, l'audience doit se tenir dans les douze semaines, avec une decision dans les trente jours suivant la fin de celle-ci."
-    ]
-  },
-  {
-    id: "transfer-window-roundup-ar",
-    title: "سوق الانتقالات: باركولا إلى ليفربول ومارتينيلي إلى الهلال",
-    category: "Transfers",
-    league: "الدوري الإنجليزي",
-    date: "2026-10-03",
-    lang: "ar",
-    author: "غرفة الأخبار",
-    excerpt: "اتفق ليفربول على صفقة بقيمة نحو 123 مليون جنيه إسترليني لضم برادلي باركولا، وأتم مانشستر يونايتد التعاقد مع باليبا مقابل 70 مليون جنيه.",
-    accent: "#fbbf24",
-    image: "",
-    source: {
-      name: "BBC Sport",
-      url: "https://www.bbc.com/sport/football/transfer"
-    },
-    body: [
-      "اتفق ليفربول مع باريس سان جيرمان على صفقة بقيمة تقارب 123 مليون جنيه إسترليني مقابل الجناح برادلي باركولا، وتعد واحدة من أعلى الصفقات في هذا الموسم.",
-      "وفي المقابل، بيع أرسنال مارتينيلي إلى الهلال السعودي مقابل نحو 60 مليون جنيه، وأتم مانشستر يونايتد التعاقد مع اللاعب الغاني باليبا من برايتون مقابل 70 مليون جنيه. كما اتفق مانشستر سيتي مع باليماس على التعاقد مع الجناح ألان، ودفع فولهام نحو 30 مليون جنيه لضم تشارلز من ساوثهامبتون.",
-      "وتعاقد نوتنغهام فورست مع المدافع الإيفواري ديوماندي من بورتغال، وضمت وست هام اللاعب سولومون من توتنام، بينما انتقل كيفن كيليمان من تشيلسي إلى ستراسبورغ.",
-      "## صفقات لم تكتمل بعد",
-      "ليست كل صفقات هذه النافذة نهائية. وتشير التقارير إلى أن تشيلسي تدرس الانتقال إلى الوسيط الغاني بيرغي، كما رفض توتنام طلب إعارة دانسو إلى سندرلاند، ويعمل نوتنغهام فورست على إتمام صفقة المهاجم ديلاب من تشيلسي.",
-      "> الصفقات الموصوفة بأنها متفق عليها أو مكتملة وفق ما ورد في بي بي سي سبورت، أما الباقي فهو مفاوضات قد تتغير."
     ]
   }
 ];

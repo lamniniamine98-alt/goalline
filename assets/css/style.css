@@ -21,19 +21,6 @@
   --font-head: "Barlow Condensed", Inter, sans-serif;
 }
 
-/* Arabic needs its own font and looser leading; no letter-spacing. */
-html[lang="ar"] {
-  --font-body: "Cairo", "Segoe UI", Tahoma, sans-serif;
-  --font-head: "Cairo", "Segoe UI", Tahoma, sans-serif;
-}
-
-html[lang="ar"] body { line-height: 1.85; }
-
-html[lang="ar"] :is(h1, h2, h3, h4, .h-txt, .logo, .widget-head, .section-head h2, .breadcrumb, .tag) {
-  letter-spacing: 0;
-  text-transform: none;
-}
-
 [data-theme="light"] {
   --bg: #f4f6fb;
   --bg-soft: #ffffff;
@@ -181,45 +168,6 @@ h1, h2, h3, h4 {
 }
 
 .tools { display: flex; gap: 8px; align-items: center; }
-
-.lang-pick { display: flex; }
-
-.lang-pick select {
-  appearance: none;
-  -webkit-appearance: none;
-  padding: 8px 30px 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
-    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
-  background-position:
-    calc(100% - 16px) calc(50% + 1px),
-    calc(100% - 11px) calc(50% + 1px);
-  background-size: 5px 5px, 5px 5px;
-  background-repeat: no-repeat;
-  color: var(--text);
-  font: inherit;
-  font-size: .85rem;
-  font-weight: 500;
-  cursor: pointer;
-  max-width: 130px;
-}
-
-.lang-pick select:hover { border-color: var(--brand); }
-
-.lang-pick select option {
-  background: var(--surface);
-  color: var(--text);
-}
-
-[dir="rtl"] .lang-pick select {
-  padding: 8px 12px 8px 30px;
-  background-position:
-    16px calc(50% + 1px),
-    11px calc(50% + 1px);
-}
 
 .search {
   position: relative;
@@ -376,17 +324,6 @@ h1, h2, h3, h4 {
 }
 
 .section-head h2 { font-size: 1.6rem; text-transform: uppercase; letter-spacing: 1px; }
-
-.lang-mark {
-  padding: 1px 6px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: var(--surface-2);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .6px;
-  color: var(--muted);
-}
 
 .filters {
   display: flex;
@@ -588,8 +525,6 @@ h1, h2, h3, h4 {
 .breadcrumb .sep { color: var(--line); }
 
 .breadcrumb .sep::before { content: "\2192"; }
-
-[dir="rtl"] .breadcrumb .sep::before { content: "\2190"; }
 
 .breadcrumb a:hover { color: var(--brand); }
 

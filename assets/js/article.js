@@ -12,14 +12,11 @@ function renderChrome() {
   setText("related-head", t("related"));
   setText("share-link", t("shareCopy"));
   setText("share-twitter", t("shareX"));
-  setText("lang-label", t("langAria"));
 }
 
 function renderBody(article) {
   const raw = article.body || [];
   const body = byId("art-body");
-  body.lang = postLang(article);
-  body.dir = dirFor(postLang(article));
   body.innerHTML = raw
     .map((line) => {
       const text = line.trim();
@@ -36,8 +33,6 @@ function renderSource(article) {
   const html = sourceHtml(article);
   el.hidden = !html;
   el.innerHTML = html;
-  el.lang = postLang(article);
-  el.dir = dirFor(postLang(article));
 }
 
 function renderRelated(article) {
@@ -88,7 +83,6 @@ function render() {
   if (!article) {
     document.title = t("notFoundTitle") + " — GoalLine";
     byId("art-title").textContent = t("notFoundTitle");
-    byId("art-title").lang = CURRENT_LANG;
     byId("art-lede").textContent = t("notFoundBody");
     byId("art-tag").hidden = true;
     byId("art-hero").hidden = true;
@@ -101,20 +95,13 @@ function render() {
   }
 
   const accent = accentFor(article);
-  const lang = postLang(article);
-  const dir = dirFor(lang);
 
-  document.title = article.title + " — GoalLine";
+  applyMeta(article.title);
   const desc = document.querySelector('meta[name="description"]');
-  if (desc) desc.content = article.excerpt || t("metaDesc");
+  if (desc && article.excerpt) desc.content = article.excerpt;
 
   byId("crumb-cat").textContent = catLabel(article.category);
   byId("crumb-title").textContent = article.title;
-  byId("crumb-cat").lang = CURRENT_LANG;
-
-  const header = document.querySelector(".article-header");
-  header.lang = lang;
-  header.dir = dir;
 
   const tag = byId("art-tag");
   tag.hidden = false;
@@ -128,8 +115,6 @@ function render() {
 
   const hero = byId("art-hero");
   hero.hidden = false;
-  hero.lang = lang;
-  hero.dir = dir;
   hero.style.setProperty("--accent", accent);
   hero.innerHTML = article.image
     ? `<img src="${escapeHtml(article.image)}" alt="">`
@@ -148,5 +133,4 @@ function renderAll() {
 window.renderAll = renderAll;
 
 initTheme(byId("theme"));
-initLangSwitcher(byId("lang"));
-setLang(CURRENT_LANG);
+renderAll();
