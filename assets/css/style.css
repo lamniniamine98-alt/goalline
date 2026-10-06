@@ -637,6 +637,21 @@ h1, h2, h3, h4 {
   color: var(--text);
 }
 
+.source {
+  max-width: 780px;
+  margin: 0;
+  padding-block: 14px;
+  border-block-start: 1px solid var(--line);
+  font-size: .88rem;
+  color: var(--muted);
+}
+
+.source-label { color: var(--text); font-weight: 600; }
+
+.source a { color: var(--brand); }
+
+.source a:hover { text-decoration: underline; }
+
 .byline {
   display: flex;
   gap: 12px;

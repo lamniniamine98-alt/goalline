@@ -24,6 +24,7 @@ const I18N = {
     related: "Related articles",
     shareCopy: "Copy link",
     shareX: "Share on X",
+    sourceLabel: "Source",
     notFoundTitle: "Article not found",
     notFoundBody: "This post may have been removed, or the link is wrong.",
     footerTagline: "football news",
@@ -52,6 +53,7 @@ const I18N = {
     related: "Articles similaires",
     shareCopy: "Copier le lien",
     shareX: "Partager sur X",
+    sourceLabel: "Source",
     notFoundTitle: "Article introuvable",
     notFoundBody: "Cet article a peut-être été supprimé, ou le lien est incorrect.",
     footerTagline: "l'actualité football",
@@ -80,6 +82,7 @@ const I18N = {
     related: "أخبار ذات صلة",
     shareCopy: "نسخ الرابط",
     shareX: "مشاركة على X",
+    sourceLabel: "المصدر",
     notFoundTitle: "الخبر غير موجود",
     notFoundBody: "ربما تم حذف هذا الخبر أو أن الرابط غير صحيح.",
     footerTagline: "أخبار كرة القدم",
@@ -122,6 +125,16 @@ const CAT_LABELS = {
     en: "Injury News",
     fr: "Actualités blessures",
     ar: "أخبار الإصابات"
+  },
+  "Women's Football": {
+    en: "Women's Football",
+    fr: "Football féminin",
+    ar: "كرة القدم النسائية"
+  },
+  "International": {
+    en: "International",
+    fr: "Sélection nationale",
+    ar: "المنتديات الدولية"
   },
   "Preview": {
     en: "Preview",

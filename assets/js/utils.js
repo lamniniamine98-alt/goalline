@@ -148,6 +148,19 @@ function langLabel(lang) {
   return { en: "English", fr: "Français", ar: "العربية" }[lang] || lang;
 }
 
+/* Credit line at the end of a post: where the reporting came from.
+   Only http(s) links are rendered, so a bad value can never inject markup. */
+function sourceHtml(article) {
+  const src = article.source;
+  if (!src || !src.name) return "";
+  const name = escapeHtml(src.name);
+  const safe = /^https?:\/\//i.test(src.url || "");
+  const credit = safe
+    ? `<a href="${escapeHtml(src.url)}" target="_blank" rel="noopener noreferrer">${name}</a>`
+    : name;
+  return `<span class="source-label">${escapeHtml(t("sourceLabel"))}:</span> ${credit}`;
+}
+
 function cardHtml(article) {
   const href = `article.html?id=${encodeURIComponent(article.id)}&lang=${CURRENT_LANG}`;
   const dir = dirFor(postLang(article));

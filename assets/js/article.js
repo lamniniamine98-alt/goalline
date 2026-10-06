@@ -30,6 +30,16 @@ function renderBody(article) {
     .join("");
 }
 
+function renderSource(article) {
+  const el = byId("art-source");
+  if (!el) return;
+  const html = sourceHtml(article);
+  el.hidden = !html;
+  el.innerHTML = html;
+  el.lang = postLang(article);
+  el.dir = dirFor(postLang(article));
+}
+
 function renderRelated(article) {
   const others = ARTICLES.filter((a) => a.id !== article.id);
   const sameCat = others.filter((a) => a.category === article.category).sort(byNewest);
@@ -126,6 +136,7 @@ function render() {
     : `<span class="initials" aria-hidden="true">${escapeHtml(initials(article.title))}</span>`;
 
   renderBody(article);
+  renderSource(article);
   renderRelated(article);
 }
 
