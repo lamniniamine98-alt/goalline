@@ -9,39 +9,255 @@
    ========================================================================== */
 const DIGEST = [
     {
-        "id":  "premier-league-10-things-to-look-out-062395",
-        "title":  "Premier League: 10 things to look out for this weekend",
+        "id":  "nottingham-forests-false-start-places-early-focus-f32eab",
+        "title":  "Nottingham Forest’s false start places early focus on Glasner and Delap",
         "category":  "Premier League",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Max Dowman may get a chance, Spurs need to find balance at Stamford Bridge and Axel Disasi must make amends Premier League top scorers After seven games, Nottingham Forest’s record is eerily similar to last season: five points, five goals…",
+        "excerpt":  "Austrian’s tactics need adapting to but Forest are in the bottom three and their owner is not the patient type Sitting 19th in the Premier League was not the plan for Nottingham Forest after the arrival of a highly acclaimed manager and a…",
         "image":  "assets/img/matchday-crowd.jpg",
         "imageAlt":  "Energetic football crowd at a stadium",
         "source":  {
                        "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/23/premier-league-10-things-to-look-out-for-this-weekend"
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/nottingham-forest-oliver-glasner-time-evangelos-marinakis"
                    },
         "body":  [
-                     "Max Dowman may get a chance, Spurs need to find balance at Stamford Bridge and Axel Disasi must make amends Premier League top scorers After seven games, Nottingham Forest’s record is eerily similar to last season: five points, five goals scored. A year ago Forest’s eighth game was a 3-0 home loss to Chelsea that marked the end for Ange Postecoglou , the second of four managers to occupy the dugout last term. There…"
+                     "Austrian’s tactics need adapting to but Forest are in the bottom three and their owner is not the patient type Sitting 19th in the Premier League was not the plan for Nottingham Forest after the arrival of a highly acclaimed manager and a £45m striker to fuel their ambitions. The fates of Oliver Glasner and Liam Delap are intertwined and with the stark stats of zero home goals and a solitary point at the City Ground…"
                  ]
     },
     {
-        "id":  "oneill-bemoans-marginal-moments-but-are-celtic-8c65ff",
-        "title":  "O\u0027Neill bemoans marginal moments but are Celtic just not good enough?",
+        "id":  "cathinka-tandberg-spurs-fans-hate-arsenal-thats-8a1720",
+        "title":  "Cathinka Tandberg: ‘Spurs fans hate Arsenal. That’s how it is’",
+        "category":  "Premier League",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Norwegian forward might look to Harry Kane for inspiration on the pitch, but when north London derby comes around, she needs no lessons on what the rivalry means “It means more than just three points. It’s for the whole club. It’s for the…",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "The Guardian",
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/cathinka-tandberg-interview-tottenham-arsenal-rivalry-moving-the-goalposts-you-now"
+                   },
+        "body":  [
+                     "Norwegian forward might look to Harry Kane for inspiration on the pitch, but when north London derby comes around, she needs no lessons on what the rivalry means “It means more than just three points. It’s for the whole club. It’s for the whole place. It’s for the whole of Tottenham.” One only needs to be in the presence of Tottenham Hotspur’s Cathinka Tandberg for a few minutes to feel the passion that emanates…"
+                 ]
+    },
+    {
+        "id":  "third-longest-serving-manager-in-top-92-clubs-3d65bc",
+        "title":  "Third-longest serving manager in top 92 clubs Woodman leaves Bromley",
         "category":  "World Football",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Martin O\u0027Neill spoke of refereeing decisions and near misses after the Europa League defeat against Celta Vigo. But is the reality more concerning?",
+        "excerpt":  "Bromley part company with manager Andy Woodman following a challenging start to the 2026-27 season.",
         "image":  "assets/img/matchday-crowd.jpg",
         "imageAlt":  "Energetic football crowd at a stadium",
         "source":  {
                        "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cqx287ekvvvpo?at_medium=RSS\u0026at_campaign=rss"
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/ck0541dzqe04o?at_medium=RSS\u0026at_campaign=rss"
                    },
         "body":  [
-                     "Martin O\u0027Neill spoke of refereeing decisions and near misses after the Europa League defeat against Celta Vigo. But is the reality more concerning?"
+                     "Bromley part company with manager Andy Woodman following a challenging start to the 2026-27 season."
+                 ]
+    },
+    {
+        "id":  "manager-ins-and-outs---2026-27-691f2c",
+        "title":  "Manager ins and outs - 2026-27",
+        "category":  "Women\u0027s Football",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "BBC Sport tracks all the manager ins and outs in the Premier League, Scottish Premiership, Women\u0027s Super League, English Football League and National League.",
+        "image":  "assets/img/womens-football.jpg",
+        "imageAlt":  "Women\u0027s football match action",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cd94713djgyo?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "BBC Sport tracks all the manager ins and outs in the Premier League, Scottish Premiership, Women\u0027s Super League, English Football League and National League."
+                 ]
+    },
+    {
+        "id":  "harry-kane-says-wait-to-learn-if-262370",
+        "title":  "Harry Kane says wait to learn if he has won Ballon d’Or is stressful for family",
+        "category":  "International",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Bayern Munich and England striker is odds-on favourite ‘I try not to think about it. Obviously it is hard not to’ Harry Kane would love to know now whether he has won the Ballon d’Or because the uncertainty and constant questions are…",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "The Guardian",
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/harry-kane-ballon-dor-wait-very-stressful-family"
+                   },
+        "body":  [
+                     "Bayern Munich and England striker is odds-on favourite ‘I try not to think about it. Obviously it is hard not to’ Harry Kane would love to know now whether he has won the Ballon d’Or because the uncertainty and constant questions are driving his family to distraction. But the Bayern Munich and England striker accepts the ­suspense before the big reveal at the London Palladium on Monday night is part of the show…"
+                 ]
+    },
+    {
+        "id":  "sheff-wed-forward-lowe-racially-abused-on-be30fe",
+        "title":  "Sheff Wed forward Lowe racially abused on social media",
+        "category":  "World Football",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Sheffield Wednesday forward Jamal Lowe has revealed his wife was sent a message racially abusing him on social media.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cw23d18jry02o?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Sheffield Wednesday forward Jamal Lowe has revealed his wife was sent a message racially abusing him on social media."
+                 ]
+    },
+    {
+        "id":  "who-is-close-to-a-yellow-card-516518",
+        "title":  "Who is close to a yellow card suspension in Champions League?",
+        "category":  "Champions League",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "BBC Sport\u0027s Ask Me Anything team explains what the rules are regarding yellow card suspensions in this season\u0027s Champions League",
+        "image":  "assets/img/ucl-night-stadium.jpg",
+        "imageAlt":  "Stadium under floodlights for a European night match",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/c54g1vpypgw3o?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "BBC Sport\u0027s Ask Me Anything team explains what the rules are regarding yellow card suspensions in this season\u0027s Champions League"
+                 ]
+    },
+    {
+        "id":  "shola-ameobi-i-thought-how-can-i-93844a",
+        "title":  "Shola Ameobi: ‘I thought: how can I be most useful to Newcastle? Then the cog started turning’",
+        "category":  "Premier League",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "From experiencing racism growing up in Newcastle to becoming a derby hero and now a member of the executive team, the former striker has been on a remarkable journey “There were times where I feared for my life as a kid, being harassed and…",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "The Guardian",
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/shola-ameobi-interview-newcastle-united-derby-hero"
+                   },
+        "body":  [
+                     "From experiencing racism growing up in Newcastle to becoming a derby hero and now a member of the executive team, the former striker has been on a remarkable journey “There were times where I feared for my life as a kid, being harassed and chased by different groups of people,” Shola Ameobi says. “There were situations where I had to sprint to get away from groups of lads who didn’t like me because of what I looked…"
+                 ]
+    },
+    {
+        "id":  "maloney-undecided-on-being-a-manager-c2b7ff",
+        "title":  "Maloney undecided on being a manager - gossip",
+        "category":  "World Football",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Celtic assistant unsure about return to management as Spanish club monitor Rangers midfielder.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cqr7ymjr1dyno?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Celtic assistant unsure about return to management as Spanish club monitor Rangers midfielder."
+                 ]
+    },
+    {
+        "id":  "is-leicester-boss-martin-turning-the-foxes-450e2b",
+        "title":  "Is Leicester boss Martin turning the Foxes\u0027 fortunes?",
+        "category":  "Premier League",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Leicester are 10th in League One, 10 years after winning the Premier League. After hitting their lowest ebb, are there now grounds for optimism?",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cq073zrgv8vvo?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Leicester are 10th in League One, 10 years after winning the Premier League. After hitting their lowest ebb, are there now grounds for optimism?"
+                 ]
+    },
+    {
+        "id":  "who-am-i-plus-todays-other-quizzes-4dcb93",
+        "title":  "Who am I? Plus today\u0027s other quizzes",
+        "category":  "World Football",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Test your ball knowledge against today\u0027s Who Am I?, Five in Five and Brainteaser.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cq80zk12krmlo?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Test your ball knowledge against today\u0027s Who Am I?, Five in Five and Brainteaser."
+                 ]
+    },
+    {
+        "id":  "bbc-to-show-cray-wanderers-v-stockport-492adc",
+        "title":  "BBC to show Cray Wanderers v Stockport \u0026 Altrincham v Notts County",
+        "category":  "World Football",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Non-league clubs Altrincham and Cray Wanderers will stage the BBC\u0027s two chosen FA Cup first-round ties next month.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cked364q8jxjo?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Non-league clubs Altrincham and Cray Wanderers will stage the BBC\u0027s two chosen FA Cup first-round ties next month."
+                 ]
+    },
+    {
+        "id":  "haiti-move-nations-league-home-clash-with-91be0f",
+        "title":  "Haiti move Nations League home clash with USA to Miami amid gang violence crisis",
+        "category":  "International",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Concacaf approves exceptional hosting arrangement Haiti to face US at Nu Stadium on 14 November Miami’s Haitian community offers home advantage Concacaf on Thursday announced it has approved Haiti’s request to relocate their Nations League…",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "The Guardian",
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/haiti-usa-concacaf-nations-league-miami-home-game-gang-violence"
+                   },
+        "body":  [
+                     "Concacaf approves exceptional hosting arrangement Haiti to face US at Nu Stadium on 14 November Miami’s Haitian community offers home advantage Concacaf on Thursday announced it has approved Haiti’s request to relocate their Nations League quarter-final first leg against the United States on 14 November from Kingston, Jamaica, to Miami in an “exceptional hosting arrangement”. Haiti have been unable to play nominal…"
+                 ]
+    },
+    {
+        "id":  "man-utd-chief-keen-on-howe-068b09",
+        "title":  "Man Utd chief keen on Howe - Friday\u0027s gossip",
+        "category":  "Premier League",
+        "date":  "2026-10-22",
+        "lang":  "en",
+        "author":  "GoalLine Desk",
+        "excerpt":  "Manchester United linked with Antonio Conte, Unai Emery, Eddie Howe and Julian Nagelsmann among others if they part ways with manager Michael Carrick.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
+        "source":  {
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/c63elp2kz4exo?at_medium=RSS\u0026at_campaign=rss"
+                   },
+        "body":  [
+                     "Manchester United linked with Antonio Conte, Unai Emery, Eddie Howe and Julian Nagelsmann among others if they part ways with manager Michael Carrick."
                  ]
     },
     {
@@ -81,39 +297,39 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "man-utd-chief-keen-on-howe-068b09",
-        "title":  "Man Utd chief keen on Howe - Friday\u0027s gossip",
-        "category":  "Premier League",
+        "id":  "next-in-line-main-contenders-for-the-c98dd5",
+        "title":  "Next in line? Main contenders for the Manchester United hot seat",
+        "category":  "Transfers",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Manchester United linked with Antonio Conte, Unai Emery, Eddie Howe and Julian Nagelsmann among others if they part ways with manager Michael Carrick.",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
+        "excerpt":  "With Michael Carrick’s future at Old Trafford a matter of some debate, we examine the credentials of those who could succeed him The German was of interest to Manchester City while Omar Berrada was part of the hierarchy on the other side…",
+        "image":  "assets/img/soccer-player.jpg",
+        "imageAlt":  "Professional football player",
         "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/c63elp2kz4exo?at_medium=RSS\u0026at_campaign=rss"
+                       "name":  "The Guardian",
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/contenders-manchester-united-next-manager-michael-carrick"
                    },
         "body":  [
-                     "Manchester United linked with Antonio Conte, Unai Emery, Eddie Howe and Julian Nagelsmann among others if they part ways with manager Michael Carrick."
+                     "With Michael Carrick’s future at Old Trafford a matter of some debate, we examine the credentials of those who could succeed him The German was of interest to Manchester City while Omar Berrada was part of the hierarchy on the other side of town. He is highly thought of and would come with an impressive CV for a 39-year-old, having taken charge of Bayern Munich and Germany. Nagelsmann is regarded as an innovator who…"
                  ]
     },
     {
-        "id":  "europa-league-celtic-lose-to-celta-after-b0c599",
-        "title":  "Europa League: Celtic lose to Celta after leading, Mateta returns in Palace draw",
+        "id":  "fernandes-has-home-burgled-while-in-italy-306a40",
+        "title":  "Fernandes has home burgled while in Italy with Man Utd",
         "category":  "Champions League",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Sunderland drop points in 1-1 draw but stay unbeaten VAR rules out Juventus winner in draw with Rennes Celtic suffered more Europa League pain as Spanish side Celta Vigo came from behind to win 2-1 at Parkhead. After defeats by Ferencvaros…",
+        "excerpt":  "Manchester United captain Bruno Fernandes had his home burgled on Wednesday while he was in Italy for his club\u0027s Champions League game against Como.",
         "image":  "assets/img/ucl-night-stadium.jpg",
         "imageAlt":  "Stadium under floodlights for a European night match",
         "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/europa-league-sunderland-held-in-poznan-as-juventus-denied-comeback-win"
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cq9vz19p41x8o?at_medium=RSS\u0026at_campaign=rss"
                    },
         "body":  [
-                     "Sunderland drop points in 1-1 draw but stay unbeaten VAR rules out Juventus winner in draw with Rennes Celtic suffered more Europa League pain as Spanish side Celta Vigo came from behind to win 2-1 at Parkhead. After defeats by Ferencvaros and Benfica in their first two league phase fixtures, Martin O’Neill’s side struggled to impose themselves on the visitors who were neat and tidy without really testing Hoops…"
+                     "Manchester United captain Bruno Fernandes had his home burgled on Wednesday while he was in Italy for his club\u0027s Champions League game against Como."
                  ]
     },
     {
@@ -153,42 +369,6 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "next-in-line-main-contenders-for-the-c98dd5",
-        "title":  "Next in line? Main contenders for the Manchester United hot seat",
-        "category":  "Transfers",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "With Michael Carrick’s future at Old Trafford a matter of some debate, we examine the credentials of those who could succeed him The German was of interest to Manchester City while Omar Berrada was part of the hierarchy on the other side…",
-        "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Professional football player",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/contenders-manchester-united-next-manager-michael-carrick"
-                   },
-        "body":  [
-                     "With Michael Carrick’s future at Old Trafford a matter of some debate, we examine the credentials of those who could succeed him The German was of interest to Manchester City while Omar Berrada was part of the hierarchy on the other side of town. He is highly thought of and would come with an impressive CV for a 39-year-old, having taken charge of Bayern Munich and Germany. Nagelsmann is regarded as an innovator who…"
-                 ]
-    },
-    {
-        "id":  "fernandes-has-home-burgled-while-in-italy-306a40",
-        "title":  "Fernandes has home burgled while in Italy with Man Utd",
-        "category":  "Champions League",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Manchester United captain Bruno Fernandes had his home burgled on Wednesday while he was in Italy for his club\u0027s Champions League game against Como.",
-        "image":  "assets/img/ucl-night-stadium.jpg",
-        "imageAlt":  "Stadium under floodlights for a European night match",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cq9vz19p41x8o?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "Manchester United captain Bruno Fernandes had his home burgled on Wednesday while he was in Italy for his club\u0027s Champions League game against Como."
-                 ]
-    },
-    {
         "id":  "us-to-host-first-womens-club-world-15aa2a",
         "title":  "US to host first Women\u0027s Club World Cup in 2028",
         "category":  "Women\u0027s Football",
@@ -207,21 +387,21 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "fifa-increases-preparation-money-for-womens-world-8bcb34",
-        "title":  "Fifa increases preparation money for Women’s World Cup to match men’s teams",
-        "category":  "Women\u0027s Football",
+        "id":  "europa-league-celtic-lose-to-celta-after-b0c599",
+        "title":  "Europa League: Celtic lose to Celta after leading, Mateta returns in Palace draw",
+        "category":  "Champions League",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Funds for 2027 will match men’s World Cup in 2026 Players given better flights and individual hotel rooms Teams in the 2027’s Women’s World Cup in Brazil will receive the same preparation money from Fifa as those that played at the 2026…",
-        "image":  "assets/img/womens-football.jpg",
-        "imageAlt":  "Women\u0027s football match action",
+        "excerpt":  "Sunderland drop points in 1-1 draw but stay unbeaten VAR rules out Juventus winner in draw with Rennes Celtic suffered more Europa League pain as Spanish side Celta Vigo came from behind to win 2-1 at Parkhead. After defeats by Ferencvaros…",
+        "image":  "assets/img/ucl-night-stadium.jpg",
+        "imageAlt":  "Stadium under floodlights for a European night match",
         "source":  {
                        "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/fifa-increase-funds-2027-womens-world-cup-teams"
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/europa-league-sunderland-held-in-poznan-as-juventus-denied-comeback-win"
                    },
         "body":  [
-                     "Funds for 2027 will match men’s World Cup in 2026 Players given better flights and individual hotel rooms Teams in the 2027’s Women’s World Cup in Brazil will receive the same preparation money from Fifa as those that played at the 2026 men’s tournament, the world’s governing body has announced. The preparation money for the 32 teams has been more than doubled to $2.5m (£1.86m) each. In 2023, the total preparation…"
+                     "Sunderland drop points in 1-1 draw but stay unbeaten VAR rules out Juventus winner in draw with Rennes Celtic suffered more Europa League pain as Spanish side Celta Vigo came from behind to win 2-1 at Parkhead. After defeats by Ferencvaros and Benfica in their first two league phase fixtures, Martin O’Neill’s side struggled to impose themselves on the visitors who were neat and tidy without really testing Hoops…"
                  ]
     },
     {
@@ -243,39 +423,21 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "haiti-move-nations-league-home-clash-with-91be0f",
-        "title":  "Haiti move Nations League home clash with USA to Miami amid gang violence crisis",
-        "category":  "International",
+        "id":  "fifa-increases-preparation-money-for-womens-world-8bcb34",
+        "title":  "Fifa increases preparation money for Women’s World Cup to match men’s teams",
+        "category":  "Women\u0027s Football",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Concacaf approves exceptional hosting arrangement Haiti to face US at Nu Stadium on 14 November Miami’s Haitian community offers home advantage Concacaf on Thursday announced it has approved Haiti’s request to relocate their Nations League…",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
+        "excerpt":  "Funds for 2027 will match men’s World Cup in 2026 Players given better flights and individual hotel rooms Teams in the 2027’s Women’s World Cup in Brazil will receive the same preparation money from Fifa as those that played at the 2026…",
+        "image":  "assets/img/womens-football.jpg",
+        "imageAlt":  "Women\u0027s football match action",
         "source":  {
                        "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/haiti-usa-concacaf-nations-league-miami-home-game-gang-violence"
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/fifa-increase-funds-2027-womens-world-cup-teams"
                    },
         "body":  [
-                     "Concacaf approves exceptional hosting arrangement Haiti to face US at Nu Stadium on 14 November Miami’s Haitian community offers home advantage Concacaf on Thursday announced it has approved Haiti’s request to relocate their Nations League quarter-final first leg against the United States on 14 November from Kingston, Jamaica, to Miami in an “exceptional hosting arrangement”. Haiti have been unable to play nominal…"
-                 ]
-    },
-    {
-        "id":  "bbc-to-show-cray-wanderers-v-stockport-492adc",
-        "title":  "BBC to show Cray Wanderers v Stockport \u0026 Altrincham v Notts County",
-        "category":  "World Football",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Non-league clubs Altrincham and Cray Wanderers will stage the BBC\u0027s two chosen FA Cup first-round ties next month.",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cked364q8jxjo?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "Non-league clubs Altrincham and Cray Wanderers will stage the BBC\u0027s two chosen FA Cup first-round ties next month."
+                     "Funds for 2027 will match men’s World Cup in 2026 Players given better flights and individual hotel rooms Teams in the 2027’s Women’s World Cup in Brazil will receive the same preparation money from Fifa as those that played at the 2026 men’s tournament, the world’s governing body has announced. The preparation money for the 32 teams has been more than doubled to $2.5m (£1.86m) each. In 2023, the total preparation…"
                  ]
     },
     {
@@ -297,147 +459,21 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "fernandes-to-stay-captain-as-rooney-calls-0bc515",
-        "title":  "Fernandes to stay captain as Rooney calls Man Utd players babies",
-        "category":  "Champions League",
+        "id":  "champions-league-review-psg-take-a-hit-ef2043",
+        "title":  "Champions League review: PSG take a hit, Man City’s empty seats and teenage hope for Liverpool",
+        "category":  "Injury News",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Bruno Fernandes will remain as Manchester United captain and will not be disciplined for his post-match criticism of Michael Carrick after the 4-1 Champions League defeat by Como.",
-        "image":  "assets/img/ucl-night-stadium.jpg",
-        "imageAlt":  "Stadium under floodlights for a European night match",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cqe8rglz8p90o?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "Bruno Fernandes will remain as Manchester United captain and will not be disciplined for his post-match criticism of Michael Carrick after the 4-1 Champions League defeat by Como."
-                 ]
-    },
-    {
-        "id":  "football-daily-post-ferguson-worn-out-horror-show-continues-1c6de7",
-        "title":  "Football Daily | Post-Ferguson worn-out horror show continues at Manchester United",
-        "category":  "Premier League",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Sign up now! Sign up now! Sign up now? Sign up now! We’re in the midst of what the kids call “spooky season” – or, for our fellow fusty old-timers out there, “autumn”. If you’ve been cosying up with a few horror flicks this month, you’ll…",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/football-daily-email-manchester-united"
-                   },
-        "body":  [
-                     "Sign up now! Sign up now! Sign up now? Sign up now! We’re in the midst of what the kids call “spooky season” – or, for our fellow fusty old-timers out there, “autumn”. If you’ve been cosying up with a few horror flicks this month, you’ll know nothing good can come from hanging around a lake at this time of year. And so it proved for Manchester United, who endured an early Halloween nightmare on the banks of Lake…"
-                 ]
-    },
-    {
-        "id":  "what-are-reals-attacking-options-during-vinicius-747a16",
-        "title":  "What are Real\u0027s attacking options during Vinicius Jr ban?",
-        "category":  "La Liga",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Real Madrid’s attacking options are expanding under Jose Mourinho, with Endrick, Yan Diomande and Carlos Espi offering fresh solutions in the final third.",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cq70pj7p0ep6o?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "Real Madrid’s attacking options are expanding under Jose Mourinho, with Endrick, Yan Diomande and Carlos Espi offering fresh solutions in the final third."
-                 ]
-    },
-    {
-        "id":  "trumps-fifa-peace-prize-was-a-sham-08ef8f",
-        "title":  "Trump’s Fifa peace prize was a sham. A reimagined award can still have meaning | Leander Schaerlaeckens",
-        "category":  "Women\u0027s Football",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "The first awarding marked the apex of Gianni Infantino’s hubris. A new version could highlight the good in the world of soccer Sign up for our free newsletter here Poor Fifa peace prize. Unloved, unliked, mocked, tainted by association…",
-        "image":  "assets/img/womens-football.jpg",
-        "imageAlt":  "Women\u0027s football match action",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/fifa-peace-prize-infantino"
-                   },
-        "body":  [
-                     "The first awarding marked the apex of Gianni Infantino’s hubris. A new version could highlight the good in the world of soccer Sign up for our free newsletter here Poor Fifa peace prize. Unloved, unliked, mocked, tainted by association with its first winner. And now demoted, too, after Fifa’s president, Gianni Infantino, dumped the thing on the global governing body’s “social responsibility committee” to look after…"
-                 ]
-    },
-    {
-        "id":  "football-daily-e035a6",
-        "title":  "Football Daily",
-        "category":  "World Football",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Andy Mitten \u0026 Jay Motty join Rick \u0026 Lloyd to dissect Man United\u0027s disastrous night.",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sounds/play/m0033tlq?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "Andy Mitten \u0026 Jay Motty join Rick \u0026 Lloyd to dissect Man United\u0027s disastrous night."
-                 ]
-    },
-    {
-        "id":  "emery-and-nagelsmann-are-top-targets-if-4b36a3",
-        "title":  "Emery and Nagelsmann are top targets if Manchester United sack Carrick",
-        "category":  "Transfers",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Carrick expected to be in charge for Bournemouth game Compensation could be obstacle for Aston Villa’s Emery Unai Emery and Julian Nagelsmann have emerged as leading targets to replace Michael Carrick as Manchester United’s head coach…",
+        "excerpt":  "The reigning champions must deal with the absence of Khvicha Kvaratskhelia for some time, while fans at Anfield were thrilled by Rio Ngumoha Paris Saint-Germain beat Barcelona 4-2 on Tuesday , but the reigning champions lost the best…",
         "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Professional football player",
+        "imageAlt":  "Football player on the pitch",
         "source":  {
                        "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/unai-emery-julian-nagelsmann-manchester-united-michael-carrick"
+                       "url":  "https://www.theguardian.com/football/2026/oct/22/champions-league-review-psg-take-a-hit-man-citys-empty-seats-and-teenage-hope-for-liverpool"
                    },
         "body":  [
-                     "Carrick expected to be in charge for Bournemouth game Compensation could be obstacle for Aston Villa’s Emery Unai Emery and Julian Nagelsmann have emerged as leading targets to replace Michael Carrick as Manchester United’s head coach should the board decide on a change after the club’s poorest start to the season since 1986. Carrick is expected to remain in place for Sunday’s visit of Bournemouth – he is due to…"
-                 ]
-    },
-    {
-        "id":  "carrick-joins-wilcox-under-the-bus-after-abfa84",
-        "title":  "Carrick joins Wilcox under the bus after Manchester United’s latest night in crisis | Max Rushden",
-        "category":  "Transfers",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Bruno Fernandes followed Lisandro Martínez in revolt after his team’s 4-1 defeat to Como in the Champions League You have to credit Manchester United. Your local rivals have turned the Premier League into an almost meaningless farce. We…",
-        "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Professional football player",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/michael-carrick-bruno-fernandes-jason-wilcox-manchester-united-como-crisis"
-                   },
-        "body":  [
-                     "Bruno Fernandes followed Lisandro Martínez in revolt after his team’s 4-1 defeat to Como in the Champions League You have to credit Manchester United. Your local rivals have turned the Premier League into an almost meaningless farce. We are questioning the validity of anything we’ve seen over the past 20 years; wondering how many goals Erling Haaland will get in the Championship. We are looking at the league table…"
-                 ]
-    },
-    {
-        "id":  "carrick-carrying-on-but-senior-man-utd-088ec3",
-        "title":  "Carrick carrying on but senior Man Utd figures concerned by performances",
-        "category":  "Premier League",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "While head coach Michael Carrick is expected to be in charge for Sunday\u0027s match against Bournemouth, Manchester United begin the process of identifying possible replacements.",
-        "image":  "assets/img/matchday-crowd.jpg",
-        "imageAlt":  "Energetic football crowd at a stadium",
-        "source":  {
-                       "name":  "BBC Sport",
-                       "url":  "https://www.bbc.co.uk/sport/football/articles/cm1wvl5524rno?at_medium=RSS\u0026at_campaign=rss"
-                   },
-        "body":  [
-                     "While head coach Michael Carrick is expected to be in charge for Sunday\u0027s match against Bournemouth, Manchester United begin the process of identifying possible replacements."
+                     "The reigning champions must deal with the absence of Khvicha Kvaratskhelia for some time, while fans at Anfield were thrilled by Rio Ngumoha Paris Saint-Germain beat Barcelona 4-2 on Tuesday , but the reigning champions lost the best player in last season’s tournament, Khvicha Kvaratskhelia. This autumn has seen much lobbying for the Ballon d’Or, with the Georgian a popular choice, despite his absence from the World…"
                  ]
     },
     {
@@ -459,57 +495,21 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "champions-league-review-psg-take-a-hit-ef2043",
-        "title":  "Champions League review: PSG take a hit, Man City’s empty seats and teenage hope for Liverpool",
-        "category":  "Injury News",
+        "id":  "carrick-carrying-on-but-senior-man-utd-088ec3",
+        "title":  "Carrick carrying on but senior Man Utd figures concerned by performances",
+        "category":  "Premier League",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "The reigning champions must deal with the absence of Khvicha Kvaratskhelia for some time, while fans at Anfield were thrilled by Rio Ngumoha Paris Saint-Germain beat Barcelona 4-2 on Tuesday , but the reigning champions lost the best…",
-        "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Football player on the pitch",
+        "excerpt":  "While head coach Michael Carrick is expected to be in charge for Sunday\u0027s match against Bournemouth, Manchester United begin the process of identifying possible replacements.",
+        "image":  "assets/img/matchday-crowd.jpg",
+        "imageAlt":  "Energetic football crowd at a stadium",
         "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/champions-league-review-psg-take-a-hit-man-citys-empty-seats-and-teenage-hope-for-liverpool"
+                       "name":  "BBC Sport",
+                       "url":  "https://www.bbc.co.uk/sport/football/articles/cm1wvl5524rno?at_medium=RSS\u0026at_campaign=rss"
                    },
         "body":  [
-                     "The reigning champions must deal with the absence of Khvicha Kvaratskhelia for some time, while fans at Anfield were thrilled by Rio Ngumoha Paris Saint-Germain beat Barcelona 4-2 on Tuesday , but the reigning champions lost the best player in last season’s tournament, Khvicha Kvaratskhelia. This autumn has seen much lobbying for the Ballon d’Or, with the Georgian a popular choice, despite his absence from the World…"
-                 ]
-    },
-    {
-        "id":  "manchester-united-bin-fire-keeps-blazing-and-arsenal-a31490",
-        "title":  "Manchester United bin-fire keeps blazing and Arsenal draw at Bayern | Football Weekly Extra – video",
-        "category":  "Transfers",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Continue reading...",
-        "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Professional football player",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/video/2026/oct/22/manchester-united-bin-fire-keeps-blazing-and-arsenal-draw-at-bayern-football-weekly-extra-video"
-                   },
-        "body":  [
-                     "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Continue reading..."
-                 ]
-    },
-    {
-        "id":  "manchester-united-bin-fire-keeps-blazing-and-arsenal-bea685",
-        "title":  "Manchester United bin-fire keeps blazing and Arsenal draw at Bayern: Football Weekly Extra – podcast",
-        "category":  "Transfers",
-        "date":  "2026-10-22",
-        "lang":  "en",
-        "author":  "GoalLine Desk",
-        "excerpt":  "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss Wednesday night’s Champions…",
-        "image":  "assets/img/soccer-player.jpg",
-        "imageAlt":  "Professional football player",
-        "source":  {
-                       "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/audio/2026/oct/22/manchester-united-bin-fire-and-arsenal-draw-in-munich-football-weekly-extra-podcast"
-                   },
-        "body":  [
-                     "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss Wednesday night’s Champions League action . On the podcast today: another player questions the hierarchy at Manchester United after they are hammered in Como, but should captain Bruno Fernandes have held his…"
+                     "While head coach Michael Carrick is expected to be in charge for Sunday\u0027s match against Bournemouth, Manchester United begin the process of identifying possible replacements."
                  ]
     },
     {
@@ -531,21 +531,21 @@ const DIGEST = [
                  ]
     },
     {
-        "id":  "enzo-maresca-says-honest-talks-have-revitalised-ef35ba",
-        "title":  "Enzo Maresca says honest talks have revitalised Foden’s Manchester City form",
-        "category":  "Champions League",
+        "id":  "manchester-united-bin-fire-keeps-blazing-and-arsenal-bea685",
+        "title":  "Manchester United bin-fire keeps blazing and Arsenal draw at Bayern: Football Weekly Extra – podcast",
+        "category":  "Transfers",
         "date":  "2026-10-22",
         "lang":  "en",
         "author":  "GoalLine Desk",
-        "excerpt":  "Player has scored four goals in last two games for City Aston Villa the next test for Premier League leaders Enzo Maresca has revealed he held heart-to-heart conversations with Phil Foden to help the midfielder back to his best. Foden has…",
-        "image":  "assets/img/ucl-night-stadium.jpg",
-        "imageAlt":  "Stadium under floodlights for a European night match",
+        "excerpt":  "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss Wednesday night’s Champions…",
+        "image":  "assets/img/soccer-player.jpg",
+        "imageAlt":  "Professional football player",
         "source":  {
                        "name":  "The Guardian",
-                       "url":  "https://www.theguardian.com/football/2026/oct/22/enzo-maresca-phil-foden-manchester-city-form"
+                       "url":  "https://www.theguardian.com/football/audio/2026/oct/22/manchester-united-bin-fire-and-arsenal-draw-in-munich-football-weekly-extra-podcast"
                    },
         "body":  [
-                     "Player has scored four goals in last two games for City Aston Villa the next test for Premier League leaders Enzo Maresca has revealed he held heart-to-heart conversations with Phil Foden to help the midfielder back to his best. Foden has struggled over the past two years but has scored four goals in his past two games to give hope he can recapture the form that won him the Professional Footballers’ Association…"
+                     "Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss the latest Champions League action Max Rushden is joined by Jonathan Liew , Paul Watson and Archie Rhind-Tutt to discuss Wednesday night’s Champions League action . On the podcast today: another player questions the hierarchy at Manchester United after they are hammered in Como, but should captain Bruno Fernandes have held his…"
                  ]
     }
 ];
